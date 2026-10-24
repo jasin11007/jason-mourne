@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Jason Mourne</title>
+<meta name="description" content="Personal website of Jason Mourne." />
+<style>
+  :root {
+    --bg:#fafaf9; --fg:#1a1a1a; --muted:#6b6b6b; --accent:#2563eb;
+    --card:#ffffff; --border:#e5e5e5;
+  }
+  * { box-sizing:border-box; }
+  html { scroll-behavior:smooth; }
+  body { margin:0; font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;
+         background:var(--bg); color:var(--fg); line-height:1.6; }
+  a { color:var(--accent); text-decoration:none; }
+  a:hover { text-decoration:underline; }
+  nav { position:sticky; top:0; background:rgba(250,250,249,.85); backdrop-filter:blur(8px);
+        border-bottom:1px solid var(--border); z-index:10; }
+  .nav-inner { max-width:880px; margin:0 auto; padding:14px 24px; display:flex; justify-content:space-between; align-items:center; }
+  .logo { font-weight:700; font-size:18px; color:var(--fg); }
+  .nav-links { display:flex; gap:22px; font-size:15px; }
+  .nav-links a { color:var(--muted); }
+  .nav-links a:hover { color:var(--fg); text-decoration:none; }
+  main { max-width:880px; margin:0 auto; padding:0 24px; }
+  section { padding:72px 0; border-bottom:1px solid var(--border); }
+  section:last-child { border-bottom:none; }
+  h1 { font-size:56px; line-height:1.1; margin:0 0 12px; letter-spacing:-1.5px; }
+  h2 { font-size:28px; margin:0 0 24px; letter-spacing:-.5px; }
+  .tagline { font-size:20px; color:var(--muted); max-width:600px; }
+  .hero { padding:96px 0 72px; }
+  .btn { display:inline-block; padding:12px 22px; background:var(--fg); color:#fff; border-radius:6px;
+         font-weight:600; font-size:15px; transition:opacity .15s; }
+  .btn:hover { opacity:.85; text-decoration:none; }
+  .btn.outline { background:transparent; color:var(--fg); border:1px solid var(--border); }
+  .btns { display:flex; gap:12px; margin-top:28px; flex-wrap:wrap; }
+  .about p { max-width:640px; color:#333; }
+  .skills { display:flex; flex-wrap:wrap; gap:10px; }
+  .skill { padding:8px 14px; background:var(--card); border:1px solid var(--border); border-radius:999px;
+           font-size:14px; color:var(--fg); }
+  .contact-card { background:var(--card); border:1px solid var(--border); border-radius:12px;
+                  padding:32px; max-width:520px; }
+  .contact-card p { color:var(--muted); margin:0 0 18px; }
+  footer { text-align:center; padding:32px 24px; color:var(--muted); font-size:14px; }
+  @media (max-width:600px){ h1{font-size:40px;} .hero{padding:64px 0 48px;} section{padding:56px 0;} }
+</style>
+</head>
+<body>
+  <nav>
+    <div class="nav-inner">
+      <span class="logo">Jason Mourne</span>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Hi, I'm Jason.</h1>
+      <p class="tagline">Student, builder, and lifelong learner. I like turning ideas into simple, useful things.</p>
+      <div class="btns">
+        <a class="btn" href="#contact">Get in touch</a>
+        <a class="btn outline" href="#about">About me</a>
+      </div>
+    </section>
+
+    <section id="about" class="about">
+      <h2>About</h2>
+      <p>
+        I'm Jason Mourne, a student passionate about technology and problem-solving. I enjoy
+        learning how things work â€” from the basics of programming to building small projects
+        that solve real problems. This site is a work in progress and will grow as I do.
+      </p>
+      <p>
+        When I'm not studying, you'll find me experimenting with code, reading, or exploring
+        new tools. Feel free to reach out â€” I'm always happy to connect.
+      </p>
+    </section>
+
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills">
+        <span class="skill">HTML</span>
+        <span class="skill">CSS</span>
+        <span class="skill">JavaScript</span>
+        <span class="skill">Python</span>
+        <span class="skill">Problem Solving</span>
+        <span class="skill">Learning Fast</span>
+      </div>
+      <p style="color:var(--muted);margin-top:18px;font-size:14px;">Edit these to match your real skills.</p>
+    </section>
+
+    <section id="contact">
+      <h2>Contact</h2>
+      <div class="contact-card">
+        <p>Want to say hi, collaborate, or just chat? Send me an email.</p>
+        <a class="btn" href="mailto:jasindoesnone@gmail.com">jasindoesnone@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    Â© <span id="year"></span> Jason Mourne. Built with care.
+  </footer>
+  <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
